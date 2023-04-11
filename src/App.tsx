@@ -1,9 +1,18 @@
 import React from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { routes } from './routes';
+import { RouteType } from './types';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className='font-bold'>
-      Movies Data
+      <Router>
+        <Routes>
+          {routes.map((route: RouteType) => (
+            <Route key={route.key} path={route.path} element={<route.element />} />
+          ))}
+        </Routes>
+      </Router>
     </div>
   );
 }
