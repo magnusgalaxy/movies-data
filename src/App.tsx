@@ -1,11 +1,10 @@
 import React from 'react';
-import './scss/Index.scss';
 
 function App() {
   return (
-    <>
+    <div className='font-bold'>
       Movies Data
-    </>
+    </div>
   );
 }
 
